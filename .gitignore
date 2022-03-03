@@ -1,0 +1,12 @@
+/.htaccess
+wp-config.php
+sitemap.xml
+sitemap.xml.gz
+*.log
+*.sql
+/mockup1
+/mockup2
+wp-content/*
+!wp-content/themes/
+!wp-content/mu-plugins/
+!wp-content/plugins/

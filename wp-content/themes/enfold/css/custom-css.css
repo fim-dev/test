@@ -1,0 +1,2412 @@
+/* _________________________ Variables _________________________ */
+
+:root {
+	--primary-color-d-20: #003F00;				/* green light (darken 20%)				| rgba(X, X, X, X) */
+	--primary-color-d-10: #005916;				/* green light (darken 10%)				| rgba(X, X, X, X) */
+	--primary-color: #00722F;							/* green 													| rgba(X, X, X, X) */
+	--primary-color-l-10: #1A8C49;				/* green light (lighten 10%)			| rgba(X, X, X, X) */
+	--primary-color-l-20: #33A562;				/* green light (lighten 20%)			| rgba(X, X, X, X) */
+	--primary-color-l-40: #66D895;				/* green light (lighten 40%)			| rgba(X, X, X, X) */
+	--primary-color-l-70: #B3FFE2;				/* green light (lighten 70%)			| rgba(X, X, X, X) */
+	--primary-color-l-90: #CCFFFB;				/* green light (lighten 90%)			| rgba(X, X, X, X) */
+
+	--green-dark-100-d-20: #142420;				/* green dark (darken 20%)				| rgba(X, X, X, X) */
+	--green-dark-100-d-10: #2E3E3A;				/* green dark (darken 10%)				| rgba(X, X, X, X) */
+	--green-dark-100: #475753;						/* green dark 										| rgba(X, X, X, X) */
+	--green-dark-100-l-20: #7A8A86;				/* green dark (lighten 20%)				| rgba(X, X, X, X) */
+	--green-dark-100-l-40: #ADBDB9;				/* green dark (lighten 40%) 			| rgba(X, X, X, X) */
+	--green-dark-100-l-50: #C6D6D2;				/* green dark (lighten 50%) 			| rgba(X, X, X, X) */
+
+	--gold-sand: #EDE7CD;									/* gold sand 											| rgba(X, X, X, X) */
+	
+	--gold-sand-v-2: #E9E1D4;							/* gold sand v2 									| rgba(X, X, X, X) */
+
+	--orange: #edae44;
+
+	--pantone-blue-dark: #0F2A38;					/* blue dark		 									| rgba(X, X, X, X) */
+	
+	--pantone-green-dark: #2A482F;				/* green dark		 									| rgba(42, 72, 47, 1) */
+	
+	--pantone-green-light-d-20: #1A561E;	/* green light (darken 20%)				| rgba(26, 86, 30, 1) */
+	--pantone-green-light: #336F37;				/* green light 										| rgba(51, 111, 55, 1) */
+	
+	--pantone-gold-sand: #DCD09C;					/* gold sand 		 									| rgba(X, X, X, X) */
+	
+	--pantone-gold-sand-v2: #5A5136;			/* gold sand v2 									| rgba(X, X, X, X) */
+}	
+
+/* _________________________ Typography _________________________ */
+
+/* __________ Import Font __________ */
+
+@font-face {
+	font-family: mabry-light;
+	/*src: url(http://localhost/wordpress/foressa3/wp-content/themes/enfold/fonts/mabry-light.woff);*/
+	src: url(/mockup2/wp-content/themes/enfold/fonts/mabry-light.woff);
+}
+
+@font-face {
+	font-family: mabry-regular-pro;
+	/*src: url(http://localhost/wordpress/foressa3/wp-content/themes/enfold/fonts/mabry-regular-pro.ttf);*/
+	src: url(/mockup2/wp-content/themes/enfold/fonts/mabry-regular-pro.ttf);
+}
+
+@font-face {
+	font-family: Rasa-Medium;
+	src: url(/mockup2/wp-content/themes/enfold/fonts/rasa/Rasa-Medium.ttf);
+}
+
+@font-face {
+	font-family: Sarabun-Regular-400;
+	src: url(/mockup2/wp-content/themes/enfold/fonts/sarabun/Sarabun-Regular-400.ttf);
+}
+
+/* Heading Texts */
+
+h1, h2, h3, h4, h5, h6 {
+	/*font-family: mabry-regular-pro !important;*/
+	font-family: Rasa-Medium !important;
+	font-weight: normal;
+	text-transform: none !important;
+}
+
+h1 {
+	font-size: 70px;
+	line-height: 1em;
+}
+
+h2 {
+	font-size: 50px;
+	line-height: 1em;
+}
+
+/* Body Text */
+
+body {
+  /*font-family: mabry-regular-pro !important;*/
+  font-family: Sarabun-Regular-400 !important;
+  /*font-size: 20px;*/
+  font-size: 18px;
+}
+
+/* Highlight Text */
+
+::selection {
+  background: var(--pantone-green-light) !important; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: var(--pantone-green-light) !important; /* Gecko Browsers */
+}
+
+/* Links */
+
+a {
+	text-decoration: underline;
+}
+
+/* _________________________ General Layouts _________________________ */
+
+/* __________ Header __________ */
+
+/* Logo */
+
+.logo {
+	margin-left: 20px !important;
+}
+
+.logo img {
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.av_header_transparency .logo a {
+	filter: brightness(0) invert(1);
+}
+
+/* Main Menu */
+
+.av_header_transparency #header_main {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.50) 0%, transparent 100%);
+	border: none;
+}
+
+#top #header_main > .container {
+	padding: 0px;
+}
+
+#top #header.header_color .av-main-nav > li > a .avia-menu-text {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+#header .main_menu .avia-menu-fx {
+	display: none !important;
+}
+
+.special-link .avia-menu-text {
+  background-color: var(--pantone-gold-sand);
+  color: #000000 !important;
+  padding: 14px 15px;
+}
+
+/* Search */
+
+#top #searchsubmit {
+  background-color: var(--pantone-gold-sand);
+  height: 44px !important;		
+}
+
+/* __________ Footer __________ */
+
+#footer .container {
+  max-width: calc(100% - 36px - 36px);
+  padding: 0px;
+}
+
+#footer .flex_column:last-child .widget {
+	float: right;
+}
+
+/* Widget Title */
+
+#footer .widgettitle {
+	font-size: 14px;
+	font-weight: normal;
+}
+
+/* Footer Logo */
+
+#footer .flex_column:first-child img {
+	max-width: 150px !important;
+}
+
+/* Footer Text */
+
+#footer .flex_column:first-child p {
+	font-size: 13px;
+	line-height: 1.25em;
+}
+
+/* Footer Menu */
+
+#footer .menu-main-menu-container {
+	max-width: 450px;
+}
+
+#footer .widget ul {
+  display: flex;
+  flex-wrap: wrap;	
+}
+
+#footer .widget_nav_menu li {
+	/*width: 225px;*/
+	width: 190px;
+}
+
+#footer .widget_nav_menu li a {
+	font-size: 16px;
+	padding-top: 2px;
+	padding-bottom: 2px;	
+}
+
+/* Current Page Item Link */
+
+.widget_nav_menu .current-menu-item>a, .widget_nav_menu .current_page_item>a {
+	font-weight: normal !important;
+}
+
+/* __________ Socket __________ */
+
+#socket {
+	border: none;
+}
+
+#socket .container {
+  max-width: calc(100% - 36px - 36px);
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 60px;
+}
+
+#socket .copyright {
+	font-size: 13px;
+}
+
+/* Social Media Links */
+
+#socket .social_bookmarks li {
+	font-size: 16px;
+	margin-left: 25px;
+}
+
+#socket .social_bookmarks li a {
+	text-decoration: none;
+}
+
+/* __________ Sidebar __________ */
+
+.main_color .sidebar .widgettitle {
+	font-weight: normal;	
+}
+
+.main_color .sidebar a {
+	font-size: 16px;
+	font-style: normal;
+	text-decoration: none;
+	font-family: mabry-regular-pro !important;	
+}
+
+.main_color .sidebar a:hover {
+	color: #4a4a4a;
+}
+
+/* _________________________ General Elements _________________________ */
+
+/* __________ Buttons __________ */
+
+/* Avia Button - Transparent Light */
+
+.avia-button-wrap.trans-light {
+  width: 100%;
+  max-width: 225px;
+}
+
+.avia-button-wrap.trans-light a {
+  display: flex;
+  justify-content: space-between;	
+  max-width: 225px;
+  width: 100%;
+  height: 45px;
+  margin-top: 52px;
+  padding: 10px 0px;  
+  background-color: rgba(255,255,255,0);
+  color: #f8f8f8 !important;
+  border-radius: 0;
+  font-size: 16px;
+  line-height: 0.5em;
+  border-bottom: 2px solid #f8f8f8 !important;
+}
+
+.avia-button-wrap.trans-light a:after {
+  display: block;
+  content: '';
+  background-image: url('https://foressa.franciaim.net/mockup2/wp-content/themes/enfold/icons/svg/svgexport-11.svg');
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+  height: 10px;
+  width: 10px;
+}	
+
+.avia-button-wrap.trans-light a:hover {
+  background: transparent;
+}
+
+/* Avia Button - Transparent Dark */
+
+.avia-button-wrap.trans-dark {
+  width: 100%;
+  max-width: 225px;
+}
+
+.avia-button-wrap.trans-dark a {
+  display: flex;
+  justify-content: space-between;
+  max-width: 225px;
+  width: 100%;
+  height: 45px;
+  margin-top: 52px;
+  padding: 10px 0px;
+  background-color: rgba(255,255,255,0);
+  color: #4a4a4a !important;
+  border-radius: 0;
+  font-size: 16px;
+  line-height: 0.5em;
+  border-bottom: 2px solid #4a4a4a !important;
+}
+
+.avia-button-wrap.trans-dark a:after {
+  display: block;
+  content: '';
+  background-image: url('https://foressa.franciaim.net/mockup2/wp-content/themes/enfold/icons/svg/svgexport-11.svg');
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+  height: 10px;
+  width: 10px;
+  filter: brightness(1) invert(1);
+}	
+
+.avia-button-wrap.trans-dark a:hover {
+  background: transparent;
+}
+
+/* Avia Button - Solid Orange */
+
+.avia-button-wrap.solid-orange {
+  width: 100%;
+  max-width: 225px;
+}
+
+.avia-button-wrap.solid-orange a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content !important;
+  max-width: 225px;
+  width: 100%;
+  height: 52px;
+  margin-top: 52px;
+  padding: 0px 25px;
+  background-color: var(--pantone-gold-sand);
+  color: #000000 !important;
+  border-radius: 0;
+  font-size: 16px;
+  line-height: 0.5em;
+  border: none;
+}
+
+.avia-button-wrap.solid-orange a .avia_iconbox_title {
+	margin-right: 15px;
+}
+
+.avia-button-wrap.solid-orange a:after {
+  display: block;
+  content: '';
+  background-image: url('https://foressa.franciaim.net/mockup2/wp-content/themes/enfold/icons/svg/svgexport-11.svg');
+  filter: invert(100%);
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+  height: 10px;
+  width: 10px;
+}
+
+.avia-button-wrap.solid-orange a:hover {
+	background-color: var(--pantone-gold-sand);
+}
+
+/* Avia Button - Solid Green */
+
+.avia-button-wrap.solid-brown {
+  width: 100%;
+  max-width: 225px;
+}
+
+.avia-button-wrap.solid-gray a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content !important;
+  max-width: 225px;
+  width: 100%;
+  height: 52px;
+  margin-top: 52px;
+  padding: 0px 25px;
+  /*background-color: var(--pantone-green-light);*/
+  background-color: #4a4a4a;
+  /*color: #f8f8f8 !important;*/
+  color: #f8f8f8 !important;  
+  border-radius: 0;
+  font-size: 16px;
+  line-height: 0.5em;
+  border: none;
+}
+
+.avia-button-wrap.solid-gray a .avia_iconbox_title {
+	margin-right: 15px;
+}
+
+.avia-button-wrap.solid-gray a:after {
+  display: block;
+  content: '';
+  background-image: url('https://foressa.franciaim.net/mockup2/wp-content/themes/enfold/icons/svg/svgexport-11.svg');
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+  height: 10px;
+  width: 10px;
+}
+
+.avia-button-wrap.solid-green a:hover {
+	background-color: var(--pantone-green-light);
+}
+
+/* Scroll to Top Link */
+
+#scroll-top-link {
+	display: none;
+}
+
+/* _________________________ Element Templates _________________________ */
+
+/* __________ Section Style 1 __________ */
+
+.sec-style-1 .container {
+  max-width: 100% !important;
+  padding: 0px;
+}
+
+.sec-style-1 .container,
+.sec-style-1 .container .content {
+	padding: 0px !important;
+}
+
+.sec-style-1 .container .post-entry,
+.sec-style-1 .container .post-entry .entry-content-wrapper,
+.sec-style-1 .container .post-entry .entry-content-wrapper .flex_column_table {
+	height: 100% !important;
+}
+
+.sec-style-1 .flex_column:first-child {
+	padding-left: 8%;
+	padding-right: 30px;
+}
+
+.sec-style-1 .flex_column:first-child h1 {
+	line-height: 0.75em !important;
+	margin-top: 50px;
+}
+
+.sec-style-1 .flex_column:first-child .sub-heading {
+	font-size: 36px !important;
+	display: block;
+}
+
+/* __________ Section Style 2 __________ */
+
+.sec-style-2 .container .content {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.sec-style-2 .post-entry {
+	/*height: calc(100vh - 100px);*/
+	height: calc(100vh);
+}
+
+.sec-style-2 .post-entry .entry-content-wrapper,
+.sec-style-2 .post-entry .entry-content-wrapper .flex_column_table {
+	height: 100%;
+}
+
+.sec-style-2 .flex_column:first-child {
+  padding-left: calc(8% + 90px);
+  padding-right: 8%;
+}
+
+.sec-style-2 .flex_column:first-child h2 {
+	margin-bottom: 30px;
+}
+
+.sec-style-2 .flex_column:first-child .heading {
+	line-height: 1em;
+}
+
+.sec-style-2 .flex_column:first-child .subheading {
+	display: block;
+	font-size: 32px;
+	line-height: 1em;
+}
+
+.sec-style-2 .flex_column:first-child p {
+	max-width: 250px;
+}
+
+.sec-style-2 .flex_column:first-child h2,
+.sec-style-2 .flex_column:first-child p,
+.sec-style-2 .flex_column:first-child .avia-button-wrap {
+  box-shadow: 0px 0px 50px 30px rgb(34 34 34 / 48%);
+  background-color: rgb(34 34 34 / 40%);
+  border-radius: 100%;
+}
+
+/* __________ Section Style 2 (V2) __________ */
+
+.sec-style-2-2 .container .content {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.sec-style-2-2 .post-entry {
+	/*height: calc(100vh - 100px);*/
+	height: calc(100vh);
+}
+
+.sec-style-2-2 .post-entry .entry-content-wrapper,
+.sec-style-2-2 .post-entry .entry-content-wrapper .flex_column_table {
+	height: 100%;
+}
+
+.sec-style-2-2 .flex_column:first-child {
+  /*padding-left: calc(8% + 90px);*/
+  padding-left: calc(8% + 50px);
+  padding-right: 8%;
+}
+
+.sec-style-2-2 .flex_column:first-child p {
+	max-width: 225px;
+}
+
+/* __________ Section Style 3 __________ (e.g. Home Page S5) */
+
+.sec-style-3 p {
+	max-width: 330px;
+}
+
+.mfp-wrap .mfp-container .mfp-content .mfp-figure figure .mfp-bottom-bar .mfp-title {
+	display: none !important;
+}
+
+/* __________ Section Style 3 (V2) __________ (e.g. Inner Page Sample S3) */
+
+.sec-style-3-2 h2,
+.sec-style-3-2 ul {
+  width: fit-content;
+  box-shadow: 0px 0px 50px 30px rgb(34 34 34 / 48%);
+  background-color: rgb(34 34 34 / 40%);
+  border-radius: 100%;
+}
+
+/* __________ Section Style 3 (V3) __________ (e.g. Lot Types Page S3) */
+
+.sec-style-3-3 p {
+	max-width: 100%;
+}
+
+.sec-style-3-3 .subheading {
+  display: block;
+  font-size: 32px;
+  line-height: 1em;
+}
+
+.sec-style-3-3 .avia-icon-list-container {
+	margin-bottom: 0px;
+}
+
+/* __________ Section Style 4 __________ */
+
+.sec-style-4 .post-entry {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.sec-style-4 .post-entry .avia_textblock {
+	max-width: 1024px;
+}
+
+.sec-style-4 .post-entry h1 {
+	/*font-family: mabry-light !important;*/
+	text-shadow: 2px 7px 60px rgb(0 0 0), 0px -4px 10px rgb(0 0 0 / 25%);
+}
+
+.sec-style-4 .post-entry p {
+	font-family: mabry-light !important;
+  box-shadow: 0px 0px 50px 30px rgb(34 34 34 / 48%);
+  background-color: rgb(34 34 34 / 40%);
+  border-radius: 100%;
+  width: fit-content;
+}
+
+.sec-style-4 .post-entry p {
+	font-size: 32px;
+	line-height: 43px;
+}
+
+.sec-style-4 .post-entry .avia-button-wrap {
+  box-shadow: 0px 0px 50px 30px rgb(34 34 34 / 48%);
+  background-color: rgb(34 34 34 / 40%);
+  border-radius: 100%;
+}
+
+.sec-style-4 .post-entry .avia-button-wrap a {
+	margin-top: 25px;
+}
+
+/* __________ Section Style 5 __________ (e.g. Inner Page Sample Contact Us Section) */
+
+.sec-style-5 .flex_column:last-child strong {
+	font-size: 18px;
+}
+
+.sec-style-5 .flex_column:last-child p {
+	font-size: 16px;
+}
+
+/* __________ Section Style 6 __________ (e.g. Inner Page Sample S2) */
+
+.sec-style-6 .av_textblock_section:first-child {
+	max-width: 680px;
+}
+
+
+/* __________ Section Style 7 __________ (e.g. Home Page Sample S4) */
+
+.sec-style-7 h2 {
+	line-height: 1em;
+}
+
+.sec-style-7 .subheading {
+  display: block;
+  font-size: 32px;
+  line-height: 1em;
+}
+
+.sec-style-7 .avia-icon-list-container {
+	margin-bottom: 0px;
+}
+
+/* __________ Section Style 8 __________ (e.g. Home Page Sample S2) */
+
+.sec-style-8 {
+	background-color: #f8f8f8 !important;
+}
+
+.sec-style-8 .template-page {
+	padding-top: 60px;
+}
+
+.sec-style-8 .post-entry {
+	height: 100%;
+}
+
+.sec-style-8 .post-entry .entry-content-wrapper {
+	height: 100%;
+}
+
+.sec-style-8 .post-entry .entry-content-wrapper .flex_column {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sec-style-8 .post-entry .entry-content-wrapper .flex_column .av_textblock_section  {
+  width: 30%;
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+
+.sec-style-8 .post-entry .entry-content-wrapper .flex_column .av_textblock_section h2,
+.sec-style-8 .post-entry .entry-content-wrapper .flex_column .av_textblock_section p {
+  box-shadow: 0px 0px 50px 30px rgb(34 34 34 / 48%);
+  background-color: rgb(34 34 34 / 40%);
+  border-radius: 100%;
+}
+
+.sec-style-8 .post-entry .entry-content-wrapper .flex_column .avia-button {
+  margin-top: 0px;
+  margin-left: 50px;	
+}
+
+/* __________ Section Style 8 (v2) __________ (e.g. Home Page Sample S4) */
+
+.sec-style-8-2 {
+	background-color: #f8f8f8 !important;
+}
+
+.sec-style-8-2 .template-page {
+	padding-top: 60px;
+}
+
+.sec-style-8-2 .post-entry {
+	height: 100%;
+}
+
+.sec-style-8-2 .post-entry .entry-content-wrapper {
+	height: 100%;
+}
+
+.sec-style-8-2 .post-entry .entry-content-wrapper .flex_column {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sec-style-8-2 .post-entry .entry-content-wrapper .flex_column .av_textblock_section  {
+  width: 50%;
+  margin-right: 50px;
+  margin-bottom: 30px;
+  text-align: right;
+}
+
+.sec-style-8-2 .post-entry .entry-content-wrapper .flex_column .av_textblock_section h2,
+.sec-style-8-2 .post-entry .entry-content-wrapper .flex_column .av_textblock_section p {
+  box-shadow: 0px 0px 50px 30px rgb(34 34 34 / 48%);
+  background-color: rgb(34 34 34 / 40%);
+  border-radius: 100%;
+}
+
+.sec-style-8-2 .post-entry .entry-content-wrapper .flex_column .av_textblock_section p {
+	width: 55%;
+	margin-left: auto;
+}
+
+.sec-style-8-2 .post-entry .entry-content-wrapper .flex_column .avia-button-wrap {
+	width: fit-content;
+}
+
+.sec-style-8-2 .post-entry .entry-content-wrapper .flex_column .avia-button-wrap .avia-button {
+  margin-top: 0px;
+  margin-right: 50px;
+}
+
+/* __________ Section Style 9 __________ (e.g. Master Plan Page ATF) */
+
+.sec-style-9 .av_textblock_section  {
+	text-align: right;
+}
+
+.sec-style-9 .av_textblock_section h1,
+.sec-style-9 .av_textblock_section p {
+  box-shadow: 0px 0px 50px 30px rgb(34 34 34 / 48%);
+  background-color: rgb(34 34 34 / 40%);
+  border-radius: 100%;
+  width: fit-content;
+  margin-left: auto;
+}
+
+.sec-style-9 .av_textblock_section h1 {
+	max-width: 540px;
+}
+
+.sec-style-9 .av_textblock_section p {
+  max-width: 400px;
+  margin-left: auto;
+}
+
+.sec-style-9 .avia-button-wrap {
+  margin-left: auto;
+  width: fit-content;	
+}
+
+/* __________ Section Style 10 (v2) __________ (e.g. Lot Details Page S2) */	
+
+.sec-style-10-2 .flex_cell:first-child {
+	width: 33.33% !important;
+}
+
+.sec-style-10-2 .flex_cell:last-child {
+	width: 66.66% !important;
+}		
+
+.sec-style-10-2 .flex_cell:last-child .avia-image-container-inner,
+.sec-style-10-2 .flex_cell:last-child .avia-image-container-inner img {
+	width: 100%;
+}
+
+.sec-style-10-2 .flex_cell:last-child img {
+	border: 1px solid #5A5136;
+}
+
+/* Tables Code Block */
+
+.sec-style-10-2 .flex_cell:last-child .avia_codeblock_section {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  left: 10px;
+}
+
+.sec-style-10-2 .flex_cell:last-child .avia_codeblock_section .avia_codeblock div {
+  display: flex;
+  width: fit-content;
+  background: transparent;	
+}
+
+/* Tables Container */
+
+.sec-style-10-2 .flex_cell:last-child .avia_codeblock_section .avia_codeblock div div {
+	background-color: #4E6348;
+}
+
+/* First Table */
+
+.sec-style-10-2 .flex_cell:last-child .avia_codeblock_section .avia_codeblock div div:first-child {
+	margin-right: 10px;
+}
+
+/* Remove Table Border & Make Background Transparent */
+
+.sec-style-10-2 .flex_cell:last-child .avia_codeblock_section .avia_codeblock div table,
+.sec-style-10-2 .flex_cell:last-child .avia_codeblock_section .avia_codeblock div table thead,
+.sec-style-10-2 .flex_cell:last-child .avia_codeblock_section .avia_codeblock div table thead tr,
+.sec-style-10-2 .flex_cell:last-child .avia_codeblock_section .avia_codeblock div table thead tr th,
+.sec-style-10-2 .flex_cell:last-child .avia_codeblock_section .avia_codeblock div table tbody tr,
+.sec-style-10-2 .flex_cell:last-child .avia_codeblock_section .avia_codeblock div table tbody tr td {
+	background: transparent !important;
+	border: none !important;
+}
+
+/* Table */
+
+.sec-style-10-2 .flex_cell:last-child .avia_codeblock_section .avia_codeblock div table {
+	height: fit-content;
+	margin-bottom: 8px;
+}
+
+/* Table Header */
+
+.sec-style-10-2 .flex_cell:last-child .avia_codeblock_section .avia_codeblock div table thead tr th {
+  display: flex;
+  align-items: center;	
+	padding-top: 5px;
+	padding-bottom: 0px;	
+	color: #EDE8CD;
+	font-family: 'Rasa-Medium';
+	font-size: 18px;
+	font-weight: lighter;
+}
+
+.sec-style-10-2 .flex_cell:last-child .avia_codeblock_section .avia_codeblock div div:first-child table thead tr th span {
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	margin-left: 8px;
+	background-color: #554A2C;
+	border-radius: 100%;
+}
+
+.sec-style-10-2 .flex_cell:last-child .avia_codeblock_section .avia_codeblock div div:last-child table thead tr th span {
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	margin-left: 8px;
+	background-color: #342F19;
+	border-radius: 100%;  
+}
+
+/* Table TD */
+
+.sec-style-10-2 .flex_cell:last-child .avia_codeblock_section .avia_codeblock div table tbody tr td {
+  color: #EDE8CD;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1em;
+  font-size: 12px;
+}
+
+/* __________ Section Style 11 __________ */
+
+.sec-style-11 .post-entry {
+	height: 100%;
+}
+
+.sec-style-11 .post-entry .entry-content-wrapper {
+	height: 100%;	
+}
+
+.sec-style-11 .post-entry .entry-content-wrapper .flex_column:first-child {
+	height: 100%;
+}
+
+.sec-style-11 .post-entry .entry-content-wrapper .flex_column:first-child .avia_codeblock_section {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background-color: #C2E1B8;
+  padding: 20px;
+  border: 1px solid #3A6F37;
+}
+
+/* Remove Table Border & Make Background Transparent */
+
+.sec-style-11 .flex_column:first-child .avia_codeblock_section .avia_codeblock table,
+.sec-style-11 .flex_column:first-child .avia_codeblock_section .avia_codeblock table thead,
+.sec-style-11 .flex_column:first-child .avia_codeblock_section .avia_codeblock table thead tr,
+.sec-style-11 .flex_column:first-child .avia_codeblock_section .avia_codeblock table thead tr th,
+.sec-style-11 .flex_column:first-child .avia_codeblock_section .avia_codeblock table tbody tr,
+.sec-style-11 .flex_column:first-child .avia_codeblock_section .avia_codeblock table tbody tr td {
+	background: transparent !important;
+	border: none !important;
+}
+
+/* Table */
+
+.sec-style-11 .flex_column:first-child .avia_codeblock_section .avia_codeblock table {
+	height: fit-content;
+	margin-bottom: 8px;
+}
+
+/* Table Header */
+
+.sec-style-11 .flex_column:first-child .avia_codeblock_section .avia_codeblock table thead tr th {
+	padding-top: 5px;
+	padding-bottom: 0px;	
+	color: #4a4a4a;
+	font-family: 'Rasa-Medium';
+	font-size: 20px;
+	font-weight: lighter;
+}
+
+.sec-style-11 .flex_column:first-child .avia_codeblock_section .avia_codeblock table thead tr th:last-child {
+	text-align: right;
+}
+
+/* Table TD */
+
+.sec-style-11 .flex_column:first-child .avia_codeblock_section .avia_codeblock table tbody tr td {
+  color: #4a4a4a;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  line-height: 1em;
+  font-size: 16px;
+}
+
+.sec-style-11 .flex_column:first-child .avia_codeblock_section .avia_codeblock table tbody tr td:last-child {
+	text-align: right;
+}
+
+/* Column 2 */
+
+.sec-style-11 .flex_column:last-child .av_textblock_section  {
+  max-width: 500px;
+  margin-left: auto;
+}
+
+.sec-style-11 .flex_column:last-child .av_textblock_section h1 {
+	box-shadow: 0px 0px 50px 30px rgb(194 225 184 / 80%);
+	background-color: rgb(194 225 184 / 80%);
+	border-radius: 100%;
+}
+
+.sec-style-11 .flex_column:last-child .av_textblock_section p {
+  /*max-width: 425px;*/
+  /*margin: auto;*/
+  margin-top: 20px;
+
+	box-shadow: 0px 0px 50px 30px rgb(194 225 184 / 80%);
+	background-color: rgb(194 225 184 / 80%);
+	border-radius: 100%;
+}
+
+.sec-style-11 .flex_column:last-child .av_textblock_section p:first-child {
+	margin-top: 0px;
+}
+
+.sec-style-11 .flex_column:last-child img {
+	max-width: 200px;
+	margin-top: 20px;
+}
+
+/* __________ Gallery Style 1 __________ */
+
+.gallery-style-1 {
+	margin-top: 40px;
+}
+
+.gallery-style-1 .avia-gallery-thumb {
+  display: flex;
+  align-items: center;
+}
+
+.gallery-style-1 .avia-gallery-thumb img {
+	border: none !important;
+	padding: 10px;
+}
+
+/* __________ Slider Style 1 __________ */
+
+.sec-quotes p:first-child {
+	font-size: 26px;
+}
+
+.sec-quotes .slider-style-1 p.content-quote {
+	font-family: mabry-light !important;
+	font-size: 32px;
+	color: #757575;
+	line-height: 1.4;
+}
+
+/* __________ Fullwidth Slider Style 1 __________ */
+
+.fes-style-1 {
+  max-width: 1260px;
+  margin: auto;
+  /*padding-top: 60px;*/
+  margin-bottom: 60px;
+  background-color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+.fes-style-1 .slideshow_caption {
+  height: -webkit-fill-available;
+  position: relative;	
+}
+
+.fes-style-1 .slideshow_caption .slideshow_inner_caption {
+  max-width: 40%;
+  height: fit-content;
+  top: 50%;
+  right: -20%;
+  left: auto !important;
+  transform: translate(-50%, -50%);
+}
+
+.fes-style-1 .slideshow_caption .slideshow_inner_caption .slideshow_align_caption .avia-caption-title,
+.fes-style-1 .slideshow_caption .slideshow_inner_caption .slideshow_align_caption .avia-caption-content   {
+  box-shadow: 0px 0px 50px 30px rgb(34 34 34 / 48%);
+  background-color: rgb(34 34 34 / 40%);
+  border-radius: 100%;
+}
+
+.fes-style-1 .avia-button {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content !important;
+  max-width: 225px;
+  height: 52px;
+  margin-top: 52px !important;
+  padding: 0px 25px !important;
+  background-color: var(--pantone-gold-sand) !important;
+  color: #000000 !important;
+  border-radius: 0 !important;
+  font-size: 16px;
+  line-height: 0.5em;
+  border: none;
+  font-family: 'Sarabun-Regular-400';
+  text-transform: none !important;
+  font-weight: lighter !important;
+}
+
+.fes-style-1 .avia-button:after {
+  display: block;
+  content: '';
+  background-image: url('https://foressa.franciaim.net/mockup2/wp-content/themes/enfold/icons/svg/svgexport-11.svg');
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+  height: 10px;
+  width: 10px;
+  margin-left: 15px;
+  filter: invert(1);
+}
+
+/* __________ Tab Secction Style 1 __________ */
+
+.tab-sec-style-1 {
+	padding-top: 60px;
+}
+
+.tab-sec-style-1 .av-tab-arrow-container {
+  top: 10px;
+  z-index: 1;
+}
+
+.tab-sec-style-1 .av-tab-arrow-container span {
+	background-color: #EDE8CD !important;
+	border: 2px solid rgba(133, 134, 135, 0.4);
+}
+
+.tab-sec-style-1 .av-tab-section-image {
+	border-radius: 8px;
+}
+
+.tab-sec-style-1 .av-tab-section-outer-container .av-tab-section-inner-container .av-layout-tab {
+  padding-top: 0px;
+  padding-bottom: 110px;
+}
+
+.tab-sec-style-1 .av-tab-section-outer-container .av-tab-section-inner-container .av-layout-tab .av-layout-tab-inner .container {
+  max-width: 1250px;
+  height: calc(100vh - 200px);
+  min-height: 600px;
+  display: flex;
+  padding-left: 20px;
+  background-color: #EDE8CD;
+  border: 2px solid rgba(133, 134, 135, 0.4);
+}
+
+.tab-sec-style-1 .av-tab-section-outer-container .av-tab-section-inner-container .av-layout-tab .av-layout-tab-inner .container .flex_column:first-child .av_textblock_section {
+  margin-top: 50px;
+  margin-bottom: 50px;	
+  font-size: 16px;
+}
+
+.tab-sec-style-1 .av-tab-section-outer-container .av-tab-section-inner-container .av-layout-tab .av-layout-tab-inner .container .flex_column:first-child .av_textblock_section ul li {
+  padding: 0px;
+  font-size: 13px;
+}
+
+/* __________ Blog Posts Style 1 __________ */
+
+.blog-posts-style-1 {
+	padding-top: 20px;
+}
+
+/* Blog Post Thumbnail */
+
+.blog-posts-style-1 .avia-content-slider-inner .slide-entry-wrap .slide-entry .slide-image,
+.blog-posts-style-1 .avia-content-slider-inner .slide-entry-wrap .slide-entry .slide-image img {
+	border-radius: 0px;
+}
+
+.blog-posts-style-1 .avia-content-slider-inner .slide-entry-wrap:first-child {
+	margin-bottom: 75px;
+}
+
+.blog-posts-style-1 .avia-content-slider-inner .slide-entry-wrap .slide-entry .slide-image {
+	margin-bottom: 0px;
+}
+
+.blog-posts-style-1 .image-overlay {
+	display: none !important;
+}
+
+/* Blog Post Details */
+
+.blog-posts-style-1 .avia-content-slider-inner .slide-entry-wrap .slide-entry .slide-content {
+  min-height: 315px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(133, 134, 135, 0.4);
+  border-top: 0px;
+  padding: 25px;
+
+  font-size: 16px;
+  line-height: 26px;	  
+}
+
+.blog-posts-style-1 .avia-content-slider-inner .slide-entry-wrap .slide-entry .slide-content .entry-content-header .slide-entry-title {
+	font-weight: bold;
+}
+
+.blog-posts-style-1 .avia-content-slider-inner .slide-entry-wrap .slide-entry .slide-content .slide-meta {
+	font-size: 14px;
+}
+
+/* Comment Count */
+
+.blog-posts-style-1 .avia-content-slider-inner .slide-entry-wrap .slide-entry .slide-content .slide-meta .slide-meta-comments,
+.blog-posts-style-1 .avia-content-slider-inner .slide-entry-wrap .slide-entry .slide-content .slide-meta .slide-meta-del {
+	display: none;
+}
+
+/* Read More Button */
+
+.blog-posts-style-1 .avia-content-slider-inner .slide-entry-wrap .slide-entry .slide-content .slide-entry-excerpt .read-more-link a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content !important;
+  max-width: 225px;
+  width: 100%;
+  height: 42px;
+  margin-top: 32px;
+  padding: 0px 20px;
+  background-color: var(--pantone-gold-sand);
+  color: #000000 !important;
+  border-radius: 0;
+  font-size: 16px;
+  line-height: 0.5em;
+  border: none;
+  text-decoration: none;
+}
+
+.blog-posts-style-1 .avia-content-slider-inner .slide-entry-wrap .slide-entry .slide-content .slide-entry-excerpt .read-more-link a span {
+	display: none;
+}
+
+.blog-posts-style-1 .avia-content-slider-inner .slide-entry-wrap .slide-entry .slide-content .slide-entry-excerpt .read-more-link a:after {
+	display: block;
+	content: '';
+	background-image: url(https://foressa.franciaim.net/mockup2/wp-content/themes/enfold/icons/svg/svgexport-11.svg);
+	filter: invert(100%);
+	background-size: 10px 10px;
+	background-repeat: no-repeat;
+	height: 10px;
+	width: 10px;
+	margin-left: 15px;
+}
+
+/* Pagination */
+
+.blog-posts-style-1 .pagination .current,
+.blog-posts-style-1 .pagination a,
+.blog-posts-style-1 .fullsize .template-blog .pagination a {
+	background-color: var(--pantone-gold-sand) !important;
+	color: #000000 !important;
+	opacity: 0.6;
+}
+
+.blog-posts-style-1 .pagination .current {
+	opacity: 1;
+}
+
+/* __________ Table Group __________ */
+
+.tbl-group-2 {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;  
+  margin-bottom: 50px;
+}
+
+.tbl-group-2 > div {
+	height: fit-content;
+  /*border-radius: 10px;*/
+  /*overflow: hidden;*/
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.tbl-group-2 > div:first-child,
+.tbl-group-2 > div:last-child {
+	width: 48%;
+}
+
+.tbl-group-2 > div table {
+	margin-bottom: 0px;
+}
+
+.tbl-group-2 thead tr {
+  background: linear-gradient(90deg, rgba(26, 86, 30, 1) 0%, rgba(51, 111, 55, 1) 35%) !important;
+  color: #f8f8f8;
+}
+
+.tbl-group-2 tbody td {
+	padding: 3px 12px;
+}
+
+.tbl-group-2 table,
+.tbl-group-2 th,
+.tbl-group-2 td {
+  border: none !important;
+}
+
+.tbl-group-2 tr:nth-child(even) {
+	background-color: #f2f2f2 !important;
+}
+
+.tbl-group-2 .span-clr {
+	width: 20px;
+	height: 20px;
+  display: inline-block;
+  margin-bottom: -6px;
+  margin-right: 5px;	
+  border-radius: 100%;
+}
+
+.tbl-group-2 .span-clr-red { background-color: #dc3f48; 	}
+.tbl-group-2 .span-clr-blue { background-color: #2a3e6a; 	}
+.tbl-group-2 .span-clr-green { background-color: #48764b; 	}
+.tbl-group-2 .span-clr-yellow { background-color: #d59642; 	}
+.tbl-group-2 .span-clr-orange { background-color: #c87439; 	}
+
+/* _________________________ Forms _________________________ */
+
+/* __________ Newsletter __________ */
+
+.cf7-form-newsletter input[type='email'] {
+  height: 48px;
+  color: #4a4a4a !important;
+  background: transparent !important;
+  line-height: 22px !important;
+  border: none !important;
+  border-bottom: 1px solid #4a4a4a !important;
+  font-family: 'mabry-regular-pro' !important;
+  font-size: 16px !important;
+  letter-spacing: .4px;  
+  transition: border .35s cubic-bezier(.5, 0, 0, 1);
+}
+
+.cf7-form-newsletter input[type='submit'] {
+  height: 48px;
+  margin-bottom: 20px;
+  padding: 10px 0px;
+  background-color: rgba(255,255,255,0) !important;
+  color: transparent !important;
+  border-radius: 0;
+  font-size: 16px;
+  line-height: 0.5em;
+  border-bottom: 1px solid #4a4a4a !important;
+}
+
+.cf7-form-newsletter .wpcf7-spinner {
+	display: none;
+}
+
+.cf7-form-newsletter .btn-submit-icon {
+  display: block;
+  content: '';
+  background-image: url('https://foressa.franciaim.net/mockup2/wp-content/themes/enfold/icons/svg/svgexport-11.svg');
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+  height: 10px;
+  width: 10px;
+  filter: brightness(0) invert(0);
+  position: absolute;
+  top: 20px;
+  right: 5px;
+  z-index: -1
+}
+
+.cf7-form-newsletter .wpcf7-not-valid-tip {
+	font-size: 16px;
+}
+
+.cf7-form-newsletter .wpcf7-response-output {
+	margin: 0px !important;
+	border-color: #4a4a4a !important;
+	font-size: 16px;
+}
+
+.cf7-form-newsletter p {
+	font-size: 13px;
+}
+
+/* __________ Contact Form 1 __________ */
+
+.cf7-form-cf1 input[type='text'],
+.cf7-form-cf1 input[type='email'],
+.cf7-form-cf1 textarea {
+	max-width: 648px;
+	height: 45px;
+	margin-bottom: 15px !important;
+	padding-left: 20px !important;
+	border: 1px solid rgba(133,134,135,.4) !important;
+  line-height: 22px !important;
+  font-size: 13px !important;
+  letter-spacing: .32px;	
+}
+
+.cf7-form-cf1 textarea {
+	height: 165px;
+}
+
+.cf7-form-cf1 br {
+	display: none;
+}
+
+.cf7-form-cf1 input[type='submit'] {
+	color: #000000 !important;
+	width: 180px;
+	height: 50px;
+  margin: 35px 0 0 35px;
+  background-color: var(--pantone-gold-sand) !important;
+  font-size: 16px;
+  letter-spacing: .3px;
+}
+
+.cf7-form-cf1 input[type='submit']:hover {
+  /*background-color: #f8f8f8 !important;*/
+  /*border: 1px solid #4a4a4a;*/
+  /*color: #4a4a4a !important;	*/
+}
+
+.cf7-form-cf1 .wpcf7-not-valid-tip {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.cf7-form-cf1 .wpcf7-response-output {
+  max-width: 650px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-color: #4a4a4a !important;
+  font-size: 16px !important;
+}
+
+/* __________ Comment Form __________ */
+
+.comment-form input[type='submit'] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content !important;
+  max-width: 225px;
+  height: 42px;
+   margin-top: 20px; 
+  padding: 0px 20px;
+  background-color: var(--pantone-gold-sand) !important;
+  color: #f8f8f8 !important;
+  border-radius: 0;
+  font-size: 16px;
+  line-height: 0.5em;
+  border: none;
+  text-decoration: none;
+}
+
+/* _________________________ Page Specifics _________________________ */
+
+/* __________ Home __________ */
+
+.page-id-447 .sec-style-1 .flex_column:first-child h1 {
+  font-size: 50px;
+  line-height: 1em !important;
+}
+
+/* __________ About Aboitizland __________ */
+
+.page-id-63 .sec-atf .flex_column:last-child img {
+  max-height: 600px;
+  width: auto;	
+}
+
+.page-id-63 .sec-style-1 .flex_column:first-child {
+	margin-top: 40px !important;
+}
+
+/* __________ Virtual Tour __________ */
+
+.page-id-940 .main_color .container {
+  /*max-width: 1920px !important;*/
+  /*padding: 0px;*/
+}
+
+.page-id-940 .main_color .container .content {
+	/*padding-top: 0px;*/
+}
+
+.page-id-940 #after_section_1 .container {
+  max-width: 1920px;
+  padding: 0px;
+}
+
+.page-id-940 #after_section_1 .container .content {
+  padding: 0px;
+}
+
+/* __________ Blog Post (Single) __________ */
+
+/* Featured Image */
+
+.single-post .big-preview img {
+	border-radius: 0px;
+	margin-bottom: 20px;
+}
+
+.single-post .image-overlay {
+	display: none !important;
+}
+
+/* Comment Section */
+
+.single-post .comment-count {
+	background-color: var(--pantone-gold-sand) !important;
+}
+
+/* _________________________ Helper _________________________ */
+
+/* __________ Display __________ */
+
+.desk-d-flex {
+	display: flex;
+}
+
+.a-items-flex-start {
+	align-items: flex-start;
+}
+
+.j-c-space-between {
+	justify-content: space-between;
+}
+
+.d-none {
+	display: none;
+}
+
+/* __________ Sizing __________ */
+
+.width-fit-content {
+	width: fit-content !important;
+}
+
+/* __________ Spacing __________ */
+
+.m-bot-60 {
+	margin-bottom: 60px;
+}
+
+.m-left-auto {
+	margin-left: auto;
+}
+
+.m-auto {
+	margin: auto;
+}
+
+/* __________ Typography __________ */
+
+.f-family-mabry-regular {
+	font-family: mabry-regular-pro !important;
+}
+
+.f-family-mabry-light {
+	font-family: mabry-light !important;
+}
+
+.t-align-center {
+	text-align: center;
+}
+
+/* __________ Border __________ */
+
+.border-1-solid-dark {
+	border: 1px solid rgba(133, 134, 135, 0.4);
+}
+
+.border-2-solid-dark {
+	border: 2px solid rgba(133, 134, 135, 0.4);
+}
+
+.img-w-border-1-solid-dark img {
+	border: 1px solid rgba(133, 134, 135, 0.4) !important;
+}
+
+.img-w-border-2-solid-dark img {
+	border: 2px solid rgba(133, 134, 135, 0.4) !important;
+}
+
+/* __________ Others __________ */
+
+/* _________________________ Media Queries _________________________ */
+
+@media only screen and ( max-width:1399px ) {
+	/* _________________________ Element Templates _________________________ */
+
+	/* __________ Fullwidth Slider Style 1 __________ */
+
+	.fes-style-1 {
+		padding-left: 50px;
+		padding-right: 50px;
+	}	
+}
+
+@media only screen and ( max-width:1024px ) {
+
+	/* _________________________ General Layout _________________________ */
+
+	/* __________ Header __________ */
+
+	#header_main .container .inner-container {
+    max-width: 960px;
+    margin: auto;
+	}
+
+	/* _________________________ Element Templates _________________________ */
+
+	/* __________ Section Style 1 __________ */
+
+	.sec-style-1 .flex_column:first-child {
+		padding-left: 25px;
+		padding-right: 25px;
+	}	
+
+	/* __________ Section Style 8 __________ (e.g. Home Page Sample S2) */
+
+	.sec-style-8 .post-entry .entry-content-wrapper .flex_column .av_textblock_section {
+		width: 50%;
+	}
+
+	/* __________ Section Style 8 (v2) __________ (e.g. Home Page Sample S4) */
+
+	.sec-style-8-2 .post-entry .entry-content-wrapper .flex_column .av_textblock_section {
+		width: 50%;
+	}	
+
+	.sec-style-8-2 .post-entry .entry-content-wrapper .flex_column .av_textblock_section p {
+		width: 75%;
+	}
+
+	/* __________ Section Style 10 (v2) __________ (e.g. Lot Details Page S2) */	
+
+	.sec-style-10-2 .flex_cell:last-child .avia_codeblock_section {
+		position: initial;
+	}
+
+	.sec-style-10-2 .flex_cell:last-child .avia_codeblock_section .avia_codeblock div {
+		width: 100%;
+	}
+
+	.sec-style-10-2 .flex_cell:last-child .avia_codeblock_section .avia_codeblock div div:first-child {
+		width: 60%;
+	}
+
+	.sec-style-10-2 .flex_cell:last-child .avia_codeblock_section .avia_codeblock div div:last-child {
+		width: 40%;
+	}	
+
+	/* __________ Fullwidth Slider Style 1 __________ */
+
+	.fes-style-1 .slideshow_caption .slideshow_inner_caption {
+		width: 50%;
+		padding: 0px;
+	}
+
+}
+
+@media only screen and ( max-width:768px ) {
+
+	/* _________________________ General Layout _________________________ */
+
+	/* __________ Header __________ */
+
+	/* Logo */
+
+	.logo {
+		margin-left: 0px !important;
+	}	
+
+	#header_main .container .inner-container {
+    max-width: 716px;
+    margin: auto;
+	}	
+
+	/* Main Menu */
+
+  nav.main_menu {
+    display: block !important;
+  }
+
+  #avia-menu .menu-item {
+    display: none !important;
+  }
+
+  .av-burger-menu-main.menu-item-avia-special {
+    display: block;
+  }
+
+	.av-burger-overlay .av-burger-overlay-scroll {
+		background-color: #00722f9c;
+	}	  
+
+	/* Burger Link (Transparent Header) */
+
+	.header_color.av_header_transparency div .av-hamburger-inner,
+	.header_color.av_header_transparency div .av-hamburger-inner::before,
+	.header_color.av_header_transparency div .av-hamburger-inner::after {
+		background-color: #f8f8f8 !important;
+	}
+
+	/* Search Icon */
+
+	.header_color .menu-item-search-dropdown {
+		color: var(--primary-color-d-10) !important;
+	}	
+
+	/* _________________________ General Elements _________________________ */
+
+	/* __________ Buttons __________ */
+
+	/* Solid Orange */
+
+	.avia-button-wrap.solid-orange a {
+		margin-top: 25px !important;
+	}
+
+	/* Solid Gray */
+
+	.avia-button-wrap.solid-gray a {
+		margin-top: 25px !important;	
+	}
+
+	/* _________________________ General Layouts _________________________ */
+
+	#footer .flex_column {
+		width: 100%;
+		margin-left: 0px;
+	}
+
+	#footer .flex_column:last-child .widget {
+		float: none;
+	}
+
+	/* _________________________ Element Templates _________________________ */
+
+	/* __________ Section Style 1 __________ */
+
+	.sec-style-1 .container {
+	  width: 100% !important;
+	  /*height: min-content !important;*/
+	  height: calc(100vh - 100px) !important;
+	}
+
+	.sec-style-1 .flex_column_table {
+    display: flex !important;
+    align-items: center;
+	}
+
+	.sec-style-1 .flex_column:first-child {
+		width: 100% !important;
+		margin-bottom: 40px !important;
+	}
+
+	.sec-style-1 .flex_column:first-child p {
+    font-size: 20px;
+    line-height: 1.5;
+	}
+
+	.sec-style-1 .flex_column:first-child .sub-heading {
+		font-size: 25px !important;
+	}	
+
+	.sec-style-1 .flex_column:last-child {
+		display: none !important;
+	}
+
+	.sec-style-1 .flex_column:first-child h1 span,
+	.sec-style-1 .flex_column:first-child p {
+		box-shadow: 0px 0px 50px 30px rgb(34 34 34 / 48%);
+		background-color: rgb(34 34 34 / 40%);
+		border-radius: 100%;
+	}	
+
+	/* __________ Section Style 2 __________ */
+
+	.sec-style-2 .flex_column:first-child {
+    padding-left: 30px;
+    padding-right: 30px;
+	}	
+
+	/* __________ Section Style 8 __________ (e.g. Home Page Sample S2) */
+
+	.sec-style-8 .post-entry .entry-content-wrapper .flex_column {
+		align-content: center;
+		align-items: center;
+		justify-content: center;
+	}	
+
+	.sec-style-8 .post-entry .entry-content-wrapper .flex_column .av_textblock_section {
+		width: 85%;
+		margin-left: 0px;
+		text-align: center;		
+	}
+
+	.sec-style-8 .post-entry .entry-content-wrapper .flex_column .avia-button-wrap {
+		width: fit-content;
+	}
+
+	.sec-style-8 .post-entry .entry-content-wrapper .flex_column .avia-button-wrap .avia-button {
+    margin-bottom: 0px;
+    margin-left: 0px;
+	}
+
+	/* __________ Section Style 8 (v2) __________ (e.g. Home Page Sample S4) */
+
+	.sec-style-8-2 .post-entry .entry-content-wrapper .flex_column {
+		align-content: center;
+		align-items: center;
+		justify-content: center;
+	}	
+
+	.sec-style-8-2 .post-entry .entry-content-wrapper .flex_column .av_textblock_section {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;	
+	}
+
+	.sec-style-8-2 .post-entry .entry-content-wrapper .flex_column .av_textblock_section p {
+		width: 100%;
+	}	
+
+	.sec-style-8-2 .post-entry .entry-content-wrapper .flex_column .avia-button-wrap {
+		width: fit-content;
+	}
+
+	.sec-style-8-2 .post-entry .entry-content-wrapper .flex_column .avia-button-wrap .avia-button {
+    margin-bottom: 0px;
+    margin-right: 0px;
+	}	
+
+	/* __________ Section Style 9 __________ (e.g. Master Plan Page ATF) */	
+
+	.sec-style-9 .flex_column:last-child {
+    width: 100%;
+    margin-left: 0px;
+	}
+
+	.sec-style-9 .flex_column .av_textblock_section {
+		text-align: center;
+	}
+
+	.sec-style-9 .av_textblock_section h1 {
+    margin: auto;
+		margin-bottom: 15px;
+	}
+
+	.sec-style-9 .flex_column .av_textblock_section p {
+		max-width: 100%;
+    margin: auto;
+    margin-top: 0.85em;
+    margin-bottom: 0.85em;		
+	}
+
+	.sec-style-9 .avia-button-wrap {
+		margin: auto;
+	}	
+
+	/* __________ Section Style 11 __________ */
+
+	.sec-style-11 {
+		background: #C2E1B8 !important;
+	}
+
+	.sec-style-11 .post-entry .entry-content-wrapper {
+		display: flex !important;
+		flex-direction: column-reverse;
+	}	
+
+	.sec-style-11 .post-entry .entry-content-wrapper .flex_column {
+		width: 100%;
+	}
+
+	/* Table */
+
+	.sec-style-11 .post-entry .entry-content-wrapper .flex_column:first-child .avia_codeblock_section	{
+		position: initial;
+    width: 100%;
+	}
+
+	.sec-style-11 .flex_column:first-child img {
+		margin-bottom: 25px;
+		margin-top: 20px;
+		border: 1px solid #3A6F37;	
+	}
+
+	/* Column 2 */
+
+	.sec-style-11 .post-entry .entry-content-wrapper .flex_column:last-child {
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 50px;
+	}
+
+	.sec-style-11 .flex_column:last-child .av_textblock_section {
+		margin-right: auto;
+	}
+
+	.sec-style-11 .flex_column:last-child .av_textblock_section h1,
+	.sec-style-11 .flex_column:last-child .av_textblock_section p {
+		text-align: center !important;
+	}	
+
+	/* __________ Gallery Style 1 __________ */
+
+	.gallery-style-1 {
+		margin-top: 20px;
+	}
+
+	.gallery-style-1 .avia-gallery-thumb {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.gallery-style-1 .avia-gallery-thumb a {
+		width: 33.33% !important;
+	}	
+
+	/* __________ Fullwidth Slider Style 1 __________ */
+
+	.fes-style-1 .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;		
+	}
+
+	.fes-style-1 .slideshow_caption {
+		height: 250px;
+	}
+
+	.fes-style-1 .slideshow_caption .slideshow_inner_caption {
+		max-width: 100%;
+    width: 100%;
+		padding: 0px;
+    top: 0;
+    right: 0;
+    left: 0 !important;
+    transform: none !important;		
+	}	
+
+	.fes-style-1 .slideshow_caption .slideshow_inner_caption .slideshow_align_caption .avia-caption-title, .fes-style-1 .slideshow_caption .slideshow_inner_caption .slideshow_align_caption .avia-caption-content {
+		text-align: center;
+	}
+
+	.responsive #top .fes-style-1 .slideshow_caption h2 {
+		font-size: 36px !important;
+	}
+
+	.responsive #top .fes-style-1 .slideshow_caption .avia-caption-content {
+		font-size: 16px !important;
+	}	
+
+	.fes-style-1 .avia-button {
+		margin: auto;
+	}	
+
+	/* _________________________ Page Specifics _________________________ */	
+
+	/* __________ Home Page __________ */
+
+	.page-id-447 .sec-style-1:first-child {
+    /*background-image: linear-gradient(to bottom, rgba(42, 72, 47, 0.75), rgba(42, 72, 47, 1)), url('/mockup2/wp-content/uploads/2021/12/Inner-Page-Banner-BG-2-opt.jpeg') !important;*/
+    /*background-image: linear-gradient(to bottom, rgba(42, 72, 47, 0.75), rgba(42, 72, 47, 1)), url('/mockup2/wp-content/uploads/2022/02/Home-ATF-Banner-opt.jpg') !important;*/
+    background-image: linear-gradient(to bottom, rgb(42, 72, 47, 0), rgb(42, 72, 47, 0)), url(/mockup2/wp-content/uploads/2022/02/Home-ATF-Banner-opt.jpg) !important;
+		background-size: cover;
+		background-position: center;
+	}	
+
+	.page-id-447 .sec-style-8 .post-entry .entry-content-wrapper .flex_column {
+		background-position: 53.5% 0px !important;
+	}
+
+	.page-id-447 .sec-style-8-2 .post-entry .entry-content-wrapper .flex_column {
+		background-position: 46% 0px !important;
+	}
+
+	/* __________ About Aboitizland __________ */
+
+	.page-id-63 .sec-style-1 .flex_column_table {
+		flex-direction: column;
+	}
+
+	.page-id-63 .sec-style-1 .flex_column:last-child {
+		width: 100% !important;
+		display: block !important;
+		min-height: 50vh;
+	}
+
+	.page-id-63 .sec-style-1 .flex_column:first-child h1 span,
+	.sec-style-1 .flex_column:first-child p {
+    box-shadow: none;
+    background-color: transparent;		
+	}
+
+	/* __________ Virtual Tour __________ */
+
+	.page-id-940 .main_color .container {
+	  width: 100% !important;
+	  padding-bottom: 0px !important;
+	}
+
+	.page-id-940 .main_color .container .content iframe {
+		height: calc(100vh - 120px) !important;
+	}	
+
+	/* _________________________ General Layout _________________________ */
+
+	/* __________ Spacing __________ */
+
+	.mob-m-left-right-auto {
+		margin-left: auto;
+		margin-right: auto;
+	}
+ 	
+}
+
+@media only screen and ( max-width:767px ) {
+
+	/* _________________________ General Layouts _________________________ */
+
+	/* __________ Header __________ */
+
+	/* Main Menu */
+
+	.av_header_transparency #header_main {
+		background: var(--pantone-green-dark);
+	}
+
+	/* Search Icon (Transparent Header) */
+
+	.header_color.av_header_transparency .menu-item-search-dropdown {
+		color: #f8f8f8;
+	}	
+
+	.responsive #top #wrap_all .av_header_transparency .main_menu ul:first-child > li > a {
+		color: #f8f8f8;
+	}		
+
+	/* _________________________ Element Templates _________________________ */
+
+	/* __________ Section Style 10 __________ (e.g. Master Plan Page S2) */	
+
+	/* Swap Column */
+
+	.sec-style-10 .flex_cell:first-child {
+		padding-top: 60px !important;
+	}
+
+	.sec-style-10 .flex_cell:last-child {
+		padding-top: 5px !important;
+		padding-bottom: 60px !important;
+	}			
+
+	/* __________ Section Style 10 (v2) __________ (e.g. Lot Details Page S2) */	
+
+	.sec-style-10-2 .flex_cell:first-child {
+		width: 100% !important;
+	}
+
+	.sec-style-10-2 .flex_cell:last-child {
+		width: 100% !important;
+	}
+
+	/* __________ Tab Secction Style 1 __________ */	
+
+	/* Tab Title */
+
+	.tab-sec-style-1 .av-tab-section-tab-title-container {
+		min-width: auto;
+		display: flex;
+		justify-content: center;
+		padding-bottom: 15px;
+	}
+
+	.tab-sec-style-1 .av-tab-section-tab-title-container .av-section-tab-title {
+    max-width: 100px;		
+	}
+
+	.tab-sec-style-1 .av-tab-section-tab-title-container .av-section-tab-title .av-tab-section-image {
+		width: auto;
+		height: 60px;
+	}
+
+	/* Tab Content */
+
+	.tab-sec-style-1 .av-tab-arrow-container {
+		display: none;
+	}
+
+	.tab-sec-style-1 .av-tab-section-outer-container .av-tab-section-inner-container {
+		display: flex;
+	}
+
+	.tab-sec-style-1 .av-tab-section-outer-container .av-tab-section-inner-container .av-layout-tab {
+		height: fit-content;
+		padding-bottom: 25px;
+	}
+
+	.tab-sec-style-1 .av-tab-section-outer-container .av-tab-section-inner-container .av-layout-tab .av-layout-tab-inner .container {
+		height: auto;
+	}
+
+	.tab-sec-style-1 .av-tab-section-outer-container .av-tab-section-inner-container .av-layout-tab .av-layout-tab-inner .container .flex_column:last-child {
+		padding: 0px 20px;
+	}
+
+}
+
+@media only screen and ( max-width:540px ) {
+
+	/* _________________________ Typography _________________________ */
+
+	/* Heading Texts */
+
+	h1 {
+		font-size: 36px;
+	}
+
+	h2 {
+		font-size: 36px;
+	}
+
+	/* Body Text */
+
+	body {
+	  font-size: 16px;
+	}
+
+	/* _________________________ General Layouts _________________________ */
+
+	/* __________ Header __________ */
+
+	/* Main Menu Links */
+
+	.html_av-overlay-full #av-burger-menu-ul li	{
+    font-size: 20px;
+    padding: 10px 0;
+	}
+
+	.html_av-overlay-full #av-burger-menu-ul li.special-link {
+		margin-top: 10px;
+	}
+
+	.html_av-overlay-full #av-burger-menu-ul li.special-link .avia-menu-text  {
+		padding: 14px 45px;
+	}
+
+	/* Burger Link */
+
+	.header_color div .av-hamburger-inner,
+	.header_color div .av-hamburger-inner::before,
+	.header_color div .av-hamburger-inner::after {
+		background-color: var(--primary-color-d-10) !important;
+	}
+
+	.header_color .is-active .av-hamburger-inner,
+	.header_color .is-active .av-hamburger-inner::before,
+	.header_color .is-active .av-hamburger-inner::after {
+		background-color: #f8f8f8 !important;
+	}	
+
+	/* __________ Sidebar __________ */
+
+	.sidebar_right .comment_container {
+		padding-right: 0px;
+	}	
+
+	/* __________ Footer __________ */
+
+	#footer .flex_column:last-child .widget {
+		float: none;
+	}
+
+	/* Footer Menu */
+
+	#footer .widget_nav_menu li {
+		width: 150px;
+		line-height: 2.25em;
+	}
+
+	/* __________ Socket __________ */
+
+	#socket .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 0px;
+	}
+
+	#socket .copyright {
+		order: 2;
+	}
+
+	#socket .social_bookmarks {
+    order: 1;
+    margin-bottom: 30px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+	}
+
+	/* _________________________ General Elements _________________________ */
+
+	/* __________ Buttons __________ */
+
+	/* Avia Button - Solid Orange */
+
+	.avia-button-wrap.solid-orange.mob-center {
+    display: flex;
+    justify-content: center;
+    margin-left: auto !important;
+    margin-right: auto !important;
+	}
+
+	/* _________________________ Element Templates _________________________ */
+
+	/* __________ Section Style 2 __________ */
+
+	.sec-style-2 .container {
+		height: min-content !important;
+	}
+
+	.sec-style-2 .container .content {
+		height: min-content !important;
+	  padding-top: 30px;
+	  padding-bottom: 30px;
+	}
+
+	.sec-style-2 .post-entry {
+		height: min-content;
+	}
+
+	.sec-style-2 .flex_column:first-child {
+    margin-bottom: 0px !important;
+    padding: 40px;
+    text-align: center;
+	}
+
+	.sec-style-2 .flex_column:first-child .subheading {
+		display: block;
+		font-size: 20px;
+	}
+
+	.sec-style-2 .flex_column:first-child p {
+    margin-left: auto;
+    margin-right: auto;
+	}
+
+	.sec-style-2 .flex_column:last-child {
+		display: none !important;
+	}
+
+	/* __________ Section Style 3 __________ */
+
+	.sec-style-3 .container .content {
+    padding-top: 100px;
+    padding-bottom: 100px;
+	}
+
+	.sec-style-3 .flex_column_table {
+    display: flex !important;
+    flex-direction: column;
+	}
+
+	.sec-style-3 .flex_column:first-child {
+		order: 2;
+	}
+
+	.sec-style-3 .flex_column:last-child {
+		order: 1;
+		margin-bottom: 50px !important;
+	}
+
+	/* __________ Section Style 4 __________ */
+
+	.sec-style-4 .post-entry {
+		width: 100%;
+	  align-items: center;
+	}
+
+	.sec-style-4 .post-entry p {
+    font-size: 20px;
+    line-height: 1.5;
+	}
+
+	/* __________ Section Style 5 __________ (e.g. Inner Page Sample Contact Us Section) */
+
+	.sec-style-5 .content {
+		padding-bottom: 0px !important;
+	}
+
+	.sec-style-5 .flex_column_table {
+		margin-top: 0px !important;
+	}
+
+	/* __________ Section Style 6 __________ (e.g. Inner Page Sample S2) */
+
+	.sec-style-6 .avia-button-wrap a {
+		margin-top: 25px;
+	}
+
+	/* __________ Section Style 10 (v2) __________ (e.g. Lot Details Page S2) */	
+
+	.sec-style-10-2 .flex_cell:last-child {
+		padding-top: 5px !important;
+		padding-bottom: 50px !important;
+	}
+
+	.sec-style-10-2 .flex_cell:last-child .avia_codeblock_section .avia_codeblock div {
+		flex-direction: column;
+	}
+
+	.sec-style-10-2 .flex_cell:last-child .avia_codeblock_section .avia_codeblock div div {
+		width: 100% !important;
+	}
+
+	/* __________ Blog Posts Style 1 __________ */
+
+	/* Blog Post Details */
+
+	.blog-posts-style-1 {
+		padding-top: 0px;
+	}
+
+	.blog-posts-style-1 .avia-content-slider-inner .slide-entry-wrap:first-child {
+		margin-bottom: 0px;
+	}
+
+	.blog-posts-style-1 .avia-content-slider-inner .slide-entry-wrap .slide-entry	{
+		margin-bottom: 30px !important;
+	}
+
+	/* __________ Fullwidth Slider Style 1 __________ */
+
+	.fes-style-1 {
+		width: 85%;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	.fes-style-1 .caption_container {
+    width: 100%;
+    max-width: 100%;
+	}	
+
+	.fes-style-1 .slideshow_caption .slideshow_inner_caption {
+		width: 100%;
+	}
+
+	/* __________ Table Group __________ */
+
+	.tbl-group-2 {
+		flex-direction: column;
+		width: 100%;
+		margin-bottom: 25px;
+	}
+
+	.tbl-group-2 > div:first-child,
+	.tbl-group-2 > div:last-child {
+		width: 100%;
+	}
+
+	.tbl-group-2 > div:first-child {
+		margin-bottom: 25px;
+	}
+
+	/* _________________________ Forms _________________________ */
+
+	/* __________ Newsletter __________ */
+
+	.cf7-form-newsletter div:nth-child(2) {
+		width: 100% !important;
+	}
+
+	/* __________ Contact Form 1 __________ */
+
+	.cf7-form-cf1 .wpcf7-list-item {
+		margin-left: 0px;
+	}
+
+	.cf7-form-cf1 input[type='submit'] {
+		margin: 18px 0 0 0px;
+	}	
+
+	/* _________________________ Helper _________________________ */
+
+	/* __________ Display __________ */
+
+	.mob-d-none {
+		display: none;
+	}	
+
+	/* _________________________ Page Specifics _________________________ */
+
+	/* __________ Inner Page Sample __________ */
+
+	/* Above the Fold */
+
+	.page-id-2 .sec-style-4:first-child .av-parallax-inner {
+    /*background: linear-gradient(
+		0deg, #005916, #005916a1), url(https://foressa.franciaim.net/mockup2/wp-content/uploads/2021/12/Inner-Page-Banner-BG-2-opt.jpeg) !important; */
+    /*background-size: cover;		*/
+	}
+
+	.page-id-2 .sec-style-4:first-child .post-entry h1,
+	.page-id-2 .sec-style-4:first-child .post-entry p,
+	.page-id-2 .sec-style-4:first-child .post-entry .avia-button-wrap {
+		/*box-shadow: none;*/
+		/*background-color: transparent;*/
+	}
+
+	.page-id-2 .sec-style-6:first-child .content {
+		padding-bottom: 0px;
+	}
+
+	/* S2 */
+	.page-id-2 .sec-style-6 .content {
+		padding-bottom: 0px;
+	}
+
+	/* __________ Blog Post (Single) __________ */
+
+	/* Featured Image */
+
+	.single-post .big-preview {
+		padding-right: 0px;
+	}	
+
+}
